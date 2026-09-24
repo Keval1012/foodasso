@@ -1,0 +1,49 @@
+// body {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   height: 100vh;
+//   background-color: #f0f0f0;
+//   margin: 0;
+// }
+
+.ticket-border {
+  position: relative;
+  background-color: #fefefe; /* Fill color */
+  border: 2px solid #000; /* Border color */
+  padding: 20px; /* Adjust padding as needed */
+  width: 300px; /* Width of the border box */
+  height: 150px; /* Height of the border box */
+  border-radius: 16px; /* Adjust as needed to mimic the border radius */
+  box-shadow: 0 0 0 8px #fefefe; /* Mimics border width, adjust color as needed */
+}
+
+.ticket-border::before,
+.ticket-border::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #fefefe; /* Fill color */
+  border: 2px solid #000; /* Border color */
+  border-radius: 50%;
+}
+
+.ticket-border::before {
+  top: -10px;
+  left: -10px;
+  /* Clip path for top-left corner */
+  clip-path: path('M 20 0 Q 15 0 10 5 Q 5 10 5 15 Q 5 20 10 25 Q 15 30 20 25 Q 25 20 25 15 Q 25 10 20 5 Z');
+}
+
+.ticket-border::after {
+  bottom: -10px;
+  right: -10px;
+  /* Clip path for bottom-right corner */
+  clip-path: path('M 0 20 Q 0 15 5 10 Q 10 5 15 5 Q 20 5 25 10 Q 30 15 25 20 Q 20 25 15 25 Q 10 25 5 20 Q 0 15 0 20 Z');
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}

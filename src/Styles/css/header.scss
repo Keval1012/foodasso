@@ -1,0 +1,7 @@
+@import "./variable/index.scss";
+
+.btn-styles {
+  background-color: $btnoutline-primary !important;
+  border-color: $btnoutline-primary !important;
+  color: #fff;
+}

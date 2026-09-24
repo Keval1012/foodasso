@@ -1,0 +1,25 @@
+/* Apply custom scrollbar styles for Webkit browsers (e.g., Chrome, Safari) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #fff; /* For Firefox */
+}
+
+*::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent; /* Background of the scrollbar track */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(239 68 68) transparent; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Round the scrollbar thumb */
+  border: 2px solid transparent; /* Space around the thumb */
+  background-clip: content-box; /* Clip the background */
+}
+
+/* Optional: Add hover effect */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #ff6666; /* Darker red on hover */
+}

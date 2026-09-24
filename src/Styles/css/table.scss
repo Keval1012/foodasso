@@ -1,0 +1,53 @@
+/* src/components/Table.css */
+
+/* Ensure the body does not scroll horizontally */
+// body {
+//   overflow-x: hidden;
+// }
+
+/* Container for the table to enable horizontal scrolling */
+.table-container {
+  padding-bottom: 1rem; /* Optional: Add some padding for better appearance */
+}
+
+/* Responsive table container */
+.table-responsive {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Table styling */
+.admin_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin_table th,
+.admin_table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.admin_table th {
+  background-color: #f9fafb;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.admin_table td {
+  background-color: #ffffff;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .admin_table th,
+  .admin_table td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+}
